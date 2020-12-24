@@ -5,4 +5,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ConsoleAppThirdPartFirstLecture.Bll\ConsoleAppThirdPartFirstLecture.Bll.csproj" />
+    <ProjectReference Include="..\ConsoleAppThirdPartFirstLecture.Common\ConsoleAppThirdPartFirstLecture.Common.csproj" />
+    <ProjectReference Include="..\ConsoleAppThirdPartFirstLecture.Di\ConsoleAppThirdPartFirstLecture.Di.csproj" />
+  </ItemGroup>
+
 </Project>
