@@ -1,13 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using ConsoleAppThirdPartFirstLecture.Models;
+using System.Collections.Generic;
 
 namespace ConsoleAppThirdPartFirstLecture.Providers
 {
     public interface IUIProvider
     {
-        void SendMessage(string message);
+        List<int> State { get; }
 
-        int GetCommand();
+        void GetCommand();
+
+        void ShowPage(PageViewModel model);
 
         void ShowMenu(Dictionary<int, string> menu);
+
+        void ShowMessage(string message);
+
+        string GetText(string message);
+
+        int GetIntData(string message);
+
+        void UIClear();
     }
 }

@@ -4,6 +4,7 @@
     {
         Item = 1,
         Category = 2,
-        Exit = 3,
+        About = 3,
+        Exit = 0,
     }
 }

@@ -1,11 +1,11 @@
 ﻿namespace ConsoleAppThirdPartFirstLecture.Enums
 {
-    internal enum EntityMenuOption
+    public enum EntityOperationsMenuOption
     {
         Create = 1,
-        Edit = 2,
-        Update = 3,
+        Update = 2,
+        GetAll = 3,
         Delete = 4,
-        Back = 5,
+        Back = 0,
     }
 }

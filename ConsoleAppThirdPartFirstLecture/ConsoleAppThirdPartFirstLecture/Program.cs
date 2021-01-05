@@ -1,42 +1,42 @@
-﻿using ConsoleAppThirdPartFirstLecture.Bll.Services.Interfaces;
-using ConsoleAppThirdPartFirstLecture.Common.Models;
-using ConsoleAppThirdPartFirstLecture.Di;
-using ConsoleAppThirdPartFirstLecture.Enums;
-using ConsoleAppThirdPartFirstLecture.Presenters;
-using ConsoleAppThirdPartFirstLecture.Providers;
-using ConsoleAppThirdPartFirstLecture.Registers;
-using ConsoleAppThirdPartFirstLecture.Resources;
-using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿using ConsoleAppThirdPartFirstLecture.Registers;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace ConsoleAppThirdPartFirstLecture
 {
     class Program
     {
-        private static readonly IServiceProvider container;
-
-        private static readonly ICategoryService categoryService;
-        private static readonly IItemService itemService;
-
-        private static readonly IUIProvider provider;
-        private static readonly IMenuPresenter presenter;
-
-        static Program()
+        private static void Main(string[] args)
         {
-            var services =  IoC.Build();
-            services.Build();
-
-            container = services.BuildServiceProvider();
-
-            categoryService = (ICategoryService)container.GetService(typeof(ICategoryService));
-            itemService = (IItemService)container.GetService(typeof(IItemService));
-            provider = (IUIProvider)container.GetService(typeof(IUIProvider));
-            presenter = (IMenuPresenter)container.GetService(typeof(IMenuPresenter));
+            CreateHostBuilder(args).Build().Run();
         }
 
-        static void Main(string[] args)
+        private static IHostBuilder CreateHostBuilder(string[] args)
         {
-            provider.SendMessage(UIResources.Greeting);
+            return Host.CreateDefaultBuilder(args)
+                .ConfigureHostConfiguration(configHost =>
+                {
+                    configHost.SetBasePath(Directory.GetCurrentDirectory());
+                    configHost.AddJsonFile("hostsettings.json", optional: true);
+                    configHost.AddEnvironmentVariables(prefix: "PREFIX_");
+                    configHost.AddCommandLine(args);
+                })
+                .ConfigureAppConfiguration((hostingContext, configuration) =>
+                {
+                    configuration.Sources.Clear();
+
+                    IHostEnvironment env = hostingContext.HostingEnvironment;
+
+                    configuration
+                        .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true, true);
+
+                    IConfigurationRoot configurationRoot = configuration.Build();
+                })
+                .ConfigureServices((_, services) =>
+                    services.Build());
         }
     }
 }
