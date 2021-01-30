@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ConsoleAppThirdPartFirstLecture.Dal.Repositories.Interfaces
+namespace ConsoleAppThirdPartFirstLecture.Common.Interfaces
 {
     public interface IRepository<T> where T : class
     {

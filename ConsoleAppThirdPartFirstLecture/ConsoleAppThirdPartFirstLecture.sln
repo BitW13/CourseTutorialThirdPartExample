@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppThirdPartFirstLecture", "ConsoleAppThirdPartFirstLecture\ConsoleAppThirdPartFirstLecture.csproj", "{69D91790-9442-4F18-AB39-CF9A80C2E47E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppThirdPartFirstLecture", "ConsoleAppThirdPartFirstLecture\ConsoleAppThirdPartFirstLecture.csproj", "{69D91790-9442-4F18-AB39-CF9A80C2E47E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppThirdPartFirstLecture.Bll", "ConsoleAppThirdPartFirstLecture.Bll\ConsoleAppThirdPartFirstLecture.Bll.csproj", "{5D422356-5332-4BD3-A1CD-A26585D39C6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppThirdPartFirstLecture.Bll", "ConsoleAppThirdPartFirstLecture.Bll\ConsoleAppThirdPartFirstLecture.Bll.csproj", "{5D422356-5332-4BD3-A1CD-A26585D39C6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppThirdPartFirstLecture.Dal", "ConsoleAppThirdPartFirstLecture.Dal\ConsoleAppThirdPartFirstLecture.Dal.csproj", "{5E0D47F0-C45D-45C9-9583-6BD0B8322354}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppThirdPartFirstLecture.Dal", "ConsoleAppThirdPartFirstLecture.Dal\ConsoleAppThirdPartFirstLecture.Dal.csproj", "{5E0D47F0-C45D-45C9-9583-6BD0B8322354}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppThirdPartFirstLecture.Common", "ConsoleAppThirdPartFirstLecture.Common\ConsoleAppThirdPartFirstLecture.Common.csproj", "{2E8F8534-790A-4DDD-ADEE-6C43602D442E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppThirdPartFirstLecture.Common", "ConsoleAppThirdPartFirstLecture.Common\ConsoleAppThirdPartFirstLecture.Common.csproj", "{2E8F8534-790A-4DDD-ADEE-6C43602D442E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppThirdPartFirstLecture.Di", "ConsoleAppThirdPartFirstLecture.Di\ConsoleAppThirdPartFirstLecture.Di.csproj", "{45793BFE-4463-4C37-A88C-76708A2D208C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppThirdPartFirstLecture.Di", "ConsoleAppThirdPartFirstLecture.Di\ConsoleAppThirdPartFirstLecture.Di.csproj", "{45793BFE-4463-4C37-A88C-76708A2D208C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppThirdPartFirstLecture.JsonDal", "ConsoleAppThirdPartFirstLecture.JsonDal\ConsoleAppThirdPartFirstLecture.JsonDal.csproj", "{35ADDEC6-1A4E-4243-A37D-61F6A725A7C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{45793BFE-4463-4C37-A88C-76708A2D208C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45793BFE-4463-4C37-A88C-76708A2D208C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45793BFE-4463-4C37-A88C-76708A2D208C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35ADDEC6-1A4E-4243-A37D-61F6A725A7C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35ADDEC6-1A4E-4243-A37D-61F6A725A7C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35ADDEC6-1A4E-4243-A37D-61F6A725A7C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35ADDEC6-1A4E-4243-A37D-61F6A725A7C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

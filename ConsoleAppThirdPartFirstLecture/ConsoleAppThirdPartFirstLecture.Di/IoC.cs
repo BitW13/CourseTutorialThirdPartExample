@@ -1,17 +1,16 @@
 ﻿using ConsoleAppThirdPartFirstLecture.Bll.Services.Implementations;
 using ConsoleAppThirdPartFirstLecture.Bll.Services.Interfaces;
-using ConsoleAppThirdPartFirstLecture.Dal.Repositories.Implementations;
-using ConsoleAppThirdPartFirstLecture.Dal.Repositories.Interfaces;
+using ConsoleAppThirdPartFirstLecture.Common.Interfaces;
+using ConsoleAppThirdPartFirstLecture.JsonDal.Repositories;
+//using ConsoleAppThirdPartFirstLecture.Dal.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ConsoleAppThirdPartFirstLecture.Di
 {
     public static class IoC
     {
-        public static IServiceCollection Build()
+        public static void BuildIoC(this IServiceCollection services)
         {
-            var services = new ServiceCollection();
-
             // Repositories
             services.AddSingleton<ICategoryRepository, CategoryRepository>();
             services.AddSingleton<IItemRepository, ItemRepository>();
@@ -19,8 +18,6 @@ namespace ConsoleAppThirdPartFirstLecture.Di
             // Services
             services.AddSingleton<ICategoryService, CategoryService>();
             services.AddSingleton<IItemService, ItemService>();
-
-            return services;
         }
     }
 }

@@ -14,7 +14,15 @@ namespace ConsoleAppThirdPartFirstLecture.Dal.Storages
         static ApplicationStorage()
         {
             Categories = new List<Category>();
-            Items = new List<Item>();
+            Items = new List<Item>
+            {
+                new Item()
+                {
+                    Id = 1,
+                    Name = "name",
+                    Description = "description",
+                }
+            };
             ItemCategories = new List<ItemCategory>();
         }
     }

@@ -1,7 +1,7 @@
 ﻿using ConsoleAppThirdPartFirstLecture.Common.Models;
 using System.Collections.Generic;
 
-namespace ConsoleAppThirdPartFirstLecture.Dal.Repositories.Interfaces
+namespace ConsoleAppThirdPartFirstLecture.Common.Interfaces
 {
     public interface IItemRepository : IRepository<Item>
     {

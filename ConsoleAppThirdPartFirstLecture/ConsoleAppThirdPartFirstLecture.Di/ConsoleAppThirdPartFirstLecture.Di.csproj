@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ConsoleAppThirdPartFirstLecture.Bll\ConsoleAppThirdPartFirstLecture.Bll.csproj" />
-    <ProjectReference Include="..\ConsoleAppThirdPartFirstLecture.Dal\ConsoleAppThirdPartFirstLecture.Dal.csproj" />
+    <ProjectReference Include="..\ConsoleAppThirdPartFirstLecture.JsonDal\ConsoleAppThirdPartFirstLecture.JsonDal.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using ConsoleAppThirdPartFirstLecture.Enums;
+﻿using ConsoleAppThirdPartFirstLecture.Common.Models;
+using ConsoleAppThirdPartFirstLecture.Enums;
 using ConsoleAppThirdPartFirstLecture.Models;
 using ConsoleAppThirdPartFirstLecture.Resources;
 using System;
@@ -68,6 +69,17 @@ namespace ConsoleAppThirdPartFirstLecture.Providers
             CurrentPage = model;
             selectedMenuKey = CurrentPage.Menu.Keys.First();
             ShowCurrentPage();
+        }
+
+        public void ShowItems(IEnumerable<Item> items)
+        {
+            foreach(var item in items)
+            {
+                Console.WriteLine(item.Id);
+                Console.WriteLine(item.Name);
+                Console.WriteLine(item.Description);
+                Console.WriteLine(item.Length);
+            }
         }
 
         public void ShowMenu(Dictionary<int, string> menu)

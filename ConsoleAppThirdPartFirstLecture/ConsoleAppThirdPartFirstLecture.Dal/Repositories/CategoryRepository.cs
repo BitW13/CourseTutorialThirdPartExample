@@ -1,12 +1,12 @@
 ﻿using ConsoleAppThirdPartFirstLecture.Common.Extensions;
+using ConsoleAppThirdPartFirstLecture.Common.Interfaces;
 using ConsoleAppThirdPartFirstLecture.Common.Models;
-using ConsoleAppThirdPartFirstLecture.Dal.Repositories.Interfaces;
 using ConsoleAppThirdPartFirstLecture.Dal.Storages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ConsoleAppThirdPartFirstLecture.Dal.Repositories.Implementations
+namespace ConsoleAppThirdPartFirstLecture.Dal.Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {
@@ -36,14 +36,14 @@ namespace ConsoleAppThirdPartFirstLecture.Dal.Repositories.Implementations
 
         public void Update(int id, Category item)
         {
-            if(id != item.Id)
+            if (id != item.Id)
             {
                 throw new Exception();
             }
 
             var updatedItem = GetItemById(id);
 
-            if(updatedItem is null)
+            if (updatedItem is null)
             {
                 throw new Exception();
             }

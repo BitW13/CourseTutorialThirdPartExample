@@ -22,9 +22,9 @@ namespace ConsoleAppThirdPartFirstLecture.Helpers
         public static Dictionary<int, string> ItemOperationsMenu { get; } = new Dictionary<int, string>
         {
             { (int)EntityOperationsMenuOption.Create, string.Format(UIResources.Create, UIResources.Item) },
-            { (int)EntityOperationsMenuOption.Delete, string.Format(UIResources.Delete, UIResources.Item) },
             { (int)EntityOperationsMenuOption.Update, string.Format(UIResources.Update, UIResources.Item) },
             { (int)EntityOperationsMenuOption.GetAll, string.Format(UIResources.GetAll, UIResources.Items) },
+            { (int)EntityOperationsMenuOption.Delete, string.Format(UIResources.Delete, UIResources.Item) },
             { (int)EntityOperationsMenuOption.Back, UIResources.Back },
         };
     }

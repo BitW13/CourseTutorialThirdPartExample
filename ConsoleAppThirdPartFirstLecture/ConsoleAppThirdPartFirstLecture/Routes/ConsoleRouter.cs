@@ -1,8 +1,6 @@
 ﻿using ConsoleAppThirdPartFirstLecture.Attributes;
 using ConsoleAppThirdPartFirstLecture.Common.Extensions;
-using ConsoleAppThirdPartFirstLecture.Helpers;
 using ConsoleAppThirdPartFirstLecture.Presenters;
-using ConsoleAppThirdPartFirstLecture.Providers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +29,7 @@ namespace ConsoleAppThirdPartFirstLecture.Routes
                 selectedMethod = GetMethodInfoByRoute(type.GetMethods()
                 .Where(x => x.GetCustomAttribute(typeof(RouteMapAttribute)) != null), state);
 
-                if(selectedMethod != null)
+                if (selectedMethod != null)
                 {
                     selectedType = type;
                     break;

@@ -1,6 +1,6 @@
 ﻿using ConsoleAppThirdPartFirstLecture.Common.Models;
 
-namespace ConsoleAppThirdPartFirstLecture.Dal.Repositories.Interfaces
+namespace ConsoleAppThirdPartFirstLecture.Common.Interfaces
 {
     public interface ICategoryRepository : IRepository<Category>
     {

@@ -1,4 +1,5 @@
-﻿using ConsoleAppThirdPartFirstLecture.Models;
+﻿using ConsoleAppThirdPartFirstLecture.Common.Models;
+using ConsoleAppThirdPartFirstLecture.Models;
 using System.Collections.Generic;
 
 namespace ConsoleAppThirdPartFirstLecture.Providers
@@ -20,5 +21,7 @@ namespace ConsoleAppThirdPartFirstLecture.Providers
         int GetIntData(string message);
 
         void UIClear();
+
+        void ShowItems(IEnumerable<Item> items);
     }
 }

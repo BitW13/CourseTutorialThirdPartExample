@@ -15,13 +15,15 @@ namespace ConsoleAppThirdPartFirstLecture.Registers
         {
             services.AddHostedService<Startup>();
             services.Configure<ConsoleLifetimeOptions>(opts => opts.SuppressStatusMessages = true);
-            IoC.Build();
+
             services.AddSingleton<IUIProvider, ConsoleProvider>();
             services.AddSingleton<INotifier, ConsoleNotifier>();
             services.AddSingleton<IMainMenuPresenter, MainMenuPresenter>();
             services.AddSingleton<IItemPresenter, ItemPresenter>();
             services.AddSingleton<IRouter, ConsoleRouter>();
             services.AddSingleton<IRunner, ConsoleRunner>();
+
+            services.BuildIoC();
         }
     }
 }
